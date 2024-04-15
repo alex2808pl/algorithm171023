@@ -3,11 +3,18 @@ public class Activity {
     String name;
     int start;
     int finish;
-
+    int sum;
     public Activity(String name, int start, int finish) {
         this.name = name;
         this.start = start;
         this.finish = finish;
+    }
+
+    public Activity(String name, int start, int finish, int sum) {
+        this.name = name;
+        this.start = start;
+        this.finish = finish;
+        this.sum = sum;
     }
 
     public String getName() {
@@ -33,4 +40,13 @@ public class Activity {
     public void setFinish(int finish) {
         this.finish = finish;
     }
+
+    public int getSum() {
+        return sum;
+    }
+
+    public void setSum(int sum) {
+        this.sum = sum;
+    }
+
 }

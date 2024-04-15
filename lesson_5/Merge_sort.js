@@ -7,7 +7,7 @@ function mergeSort(arr) {
     let mid = Math.ceil(arr.length / 2);
     let leftArr = arr.slice(0, mid);
     let rightArr = arr.slice(mid);
-    console.log(leftArr + " == "+rightArr);
+    // console.log(leftArr + " == "+rightArr);
     return merge(mergeSort(leftArr), mergeSort(rightArr));
 }
 

@@ -5,11 +5,11 @@ import java.util.List;
 
 public class ActivitySelection {
     public void selectActivity(List<Activity> list) {
-        list.sort(Comparator.comparingInt(f -> f.finish));
+        list.sort(Comparator.comparingInt(Activity::getFinish).thenComparing((a,b) -> b.getSum() - a.getSum()));
         List<Activity> res = new ArrayList<>();
 
         print(list);
-        System.out.println("------");
+        System.out.println("------------");
         Activity first = list.get(0);
         int last = first.finish; // следующее свободное время
         res.add(first);

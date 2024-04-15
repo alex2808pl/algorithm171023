@@ -33,6 +33,7 @@ public class MergeSort {
         for (int j = 0; j < lengthArr - mid; j++) {
             rightArr[j] = arr[j + mid];
         }
+        System.out.println(Arrays.toString(leftArr)+" == "+Arrays.toString(rightArr));
 
         mergeSort(leftArr);
         mergeSort(rightArr);
@@ -78,5 +79,7 @@ public class MergeSort {
             rightIndex++;
             arrIndex++;
         }
+
+        System.out.println(Arrays.toString(leftArr)+" = "+Arrays.toString(rightArr)+" ===> "+Arrays.toString(arr));
     }
 }
