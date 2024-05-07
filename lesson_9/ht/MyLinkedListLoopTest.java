@@ -12,14 +12,15 @@ public class MyLinkedListLoopTest {
        lists.print();
     
        // Зацикливаем список (соединяем хвост с нодой со значением 3)
-       Node end = lists.head;
-       Node cycle = null;
+       NodeTreeHw end = lists.head;
+       NodeTreeHw cycle = null;
        while(end.getNext() != null) {
             if(end.getData()==3) cycle = end;
             end = end.getNext();
        }
        end.setNext(cycle);
     
-       System.out.println(lists.detectLoop());;
+       System.out.println("Queue = "+lists.detectLoop());
+       System.out.println("Алгоритм Флойда = "+lists.detectLoop2());
     }
 }

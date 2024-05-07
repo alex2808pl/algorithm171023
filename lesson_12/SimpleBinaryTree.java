@@ -18,6 +18,9 @@ public class SimpleBinaryTree {
         bt.insertRecursive(bt.getRoot(), new Node(4, "node 4", null, null));
         bt.print();
 
+
+       System.out.println(bt.find(4));
+
     }
 
 }

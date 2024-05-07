@@ -2,6 +2,12 @@ package lesson_12;
 
 public class BinaryTree {
 
+// find(key)
+// insert(key, value)
+// delete(value)
+// print(node)
+
+
     private Node root;
 
     // вставка через циклы
@@ -76,6 +82,20 @@ public class BinaryTree {
         return root;
     }
 
-    
+    public Node find(int key) {
+        Node current = root; // начинаем поиск с корневого узла
+
+        while (current.getKey() != key) { // поиск пока не будет найден элемент или не будут перебраны все
+            if (current.getKey() > key) { // движение влево?
+                current = current.getLeft();
+            } else {
+                current = current.getRight(); //движение вправо
+            }
+            if (current == null) { // если потомка нет,
+                return null;
+            }
+        }
+        return current; // возвращаем найденный элемент
+    }
 
 }
